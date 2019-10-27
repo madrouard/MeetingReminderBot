@@ -2,7 +2,9 @@
 
 Meeting reminders is a simple bot that allows a user to create meetings and send out reminders to users in a certain role 
 
-#Command List
+# Command List
+
+
 !setMeetingTime Time Unit role MeetingName
   Allows the user to organize a meeting, will tell a user they were invited to the event, then remind them two units before hand, then when the meeting finally starts
 
