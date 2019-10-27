@@ -24,18 +24,6 @@ def timeName(name): #converts the unit of time to it's multiple of seconds
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
 
-
-@bot.event #bruh moment
-async def on_message(message):
-  if message.author == bot.user: 
-    return 
-  if 'bruh' in message.content:
-    await message.channel.send("look at this bruh moment")
-    user = message.author
-    role = discord.utils.get(user.guild.roles, name = 'bruh')
-    await user.add_roles(role)
-  await bot.process_commands(message)
-
 @bot.command() #adds the named role to a user
 async def addrole(ctx, role):
   user = ctx.author
