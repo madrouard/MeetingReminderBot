@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import asyncio
-import schedule  # read more about functionality
+# import schedule  # read more about functionality
 import time  # get proper syntax
 
 bot = commands.Bot(command_prefix="!")
@@ -82,6 +82,16 @@ async def sendReminder(ctx, arg1, arg2, arg3):
     await asyncio.sleep(time)
     await user.dm_channel.send(message)
 
+@bot.command() #get an SCP article when given a number
+async def getSCP(ctx, arg1):
+    num = int(arg1)
+    if num < 10:
+        await ctx.channel.send("http://www.scp-wiki.net/scp-00" + str(num))
+    elif num < 100:
+        await ctx.channel.send("http://www.scp-wiki.net/scp-0" + str(num))
+    else:
+        await ctx.channel.send("http://www.scp-wiki.net/scp-" + str(num))
+
 
 @bot.command()  # sends a messages to all users with a certain role
 async def sendMassMessage(ctx, arg1, message):
@@ -151,6 +161,6 @@ async def react(ctx):
     await message.add_reaction('👍')
 
 
-bot.run('TOKEN')
+bot.run('NjE3NzcyNDQ2ODc0OTkyNjQw.Xlmj8Q.xJhrdE-w-5SDVRg26wCkYd9lVE8')
 # custom bot token, change to TOKEN before pushing
 
