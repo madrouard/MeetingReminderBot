@@ -161,6 +161,6 @@ async def react(ctx):
     await message.add_reaction('👍')
 
 
-bot.run('NjE3NzcyNDQ2ODc0OTkyNjQw.Xlmj8Q.xJhrdE-w-5SDVRg26wCkYd9lVE8')
+bot.run('TOKEN')
 # custom bot token, change to TOKEN before pushing
 
